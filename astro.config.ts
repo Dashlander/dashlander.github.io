@@ -4,6 +4,7 @@ import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@tailwindcss/vite";
+import rehypeKatex from "rehype-katex";
 import { defineConfig, envField } from "astro/config";
 import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
@@ -18,6 +19,8 @@ import { remarkAdmonitions } from "./src/plugins/remark-admonitions"; /* Add adm
 import { remarkGithubCard } from "./src/plugins/remark-github-card";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time";
 import { expressiveCodeOptions, siteConfig } from "./src/site.config";
+import remarkMath from "remark-math";
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -77,9 +80,16 @@ export default defineConfig({
 					target: "_blank",
 				},
 			],
+			rehypeKatex,
 			rehypeUnwrapImages,
 		],
-		remarkPlugins: [remarkReadingTime, remarkDirective, remarkGithubCard, remarkAdmonitions],
+		remarkPlugins: [
+			remarkReadingTime, 
+			remarkDirective, 
+			remarkGithubCard, 
+			remarkAdmonitions,
+			remarkMath,
+			],
 		remarkRehype: {
 			footnoteLabelProperties: {
 				className: [""],

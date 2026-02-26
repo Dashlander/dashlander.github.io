@@ -3,7 +3,8 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["src/*"]
+			"@/*": ["src/*"],
+			"@/katex": ["node_modules/.pnpm/rehype-katex@7.0.1/node_modules/katex/dist/katex.min.css"]
 		}
 	},
 	"include": [".astro/types.d.ts", "**/*"],
