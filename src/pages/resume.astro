@@ -1,0 +1,138 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import SocialList from "@/components/SocialList.astro";
+
+
+const meta = {
+	description: "My Resume",
+	title: "Resume",
+};
+---
+<PageLayout meta={meta}>
+  <h1 class="title mb-12">Resume</h1>
+  <div class="prose prose-sm prose-cactus max-w-none">
+
+    <!-- Header -->
+    <h2 class="text-xl font-bold">Nishant Tatar</h2>
+    <p>
+      <a href="mailto:maheshtatar@iitgn.ac.in">maheshtatar@iitgn.ac.in</a> |
+      <a href="tel:+918530832662">85308 32662</a> |
+      <a href="https://www.linkedin.com/in/nishanttatar/">LinkedIn</a> |
+      <a href="https://github.com/dashlander">GitHub</a>
+    </p>
+
+    <!-- Education -->
+    <h2>Education</h2>
+    <p><strong>Indian Institute of Technology, Gandhinagar</strong> <span class="float-right"><strong>Nov 21 - Jun 25</strong></span></p>
+    <ul>
+      <li>BTech in Materials Engineering (Minors, Computer Science & Engineering) — CGPA: 7.43/10.0</li>
+    </ul>
+
+    <!-- Technical Experience -->
+    <h2>Technical Experience</h2>
+
+    <p><strong>Molecular Dynamics Simulator</strong> <span class="float-right"><strong>Sep 24 - Oct 24</strong></span><br>
+      <em>Prof. Raghavan Ranganathan</em> - <a href="https://github.com/Dashlander/MSE-402/blob/main/Project">GitHub Repo</a>
+    </p>
+    <ul>
+      <li>Designed and developed a software system for particle motion simulation, implementing algorithms to solve computational physics problems under system constraints ensuring computational accuracy.</li>
+      <li>Implemented logging to keep track of system properties like energy, temperature and pressure with time evolution.</li>
+    </ul>
+
+    <p><strong>Material Characterization</strong> <span class="float-right"><strong>Jan 24 - Apr 24</strong></span><br>
+      <em>Prof. Superb Misra</em>
+    </p>
+    <ul>
+      <li>Conducted materials characterisation analyses to evaluate structural, chemical and physical properties, identifying constituent elemental compositions.</li>
+      <li>Techniques used: DSC, SEM, XRD, FTIR</li>
+    </ul>
+
+    <p><strong>Network Based Detection and Analysis of Fake News</strong> <span class="float-right"><strong>Jan 24 - Apr 24</strong></span><br>
+      <em>Prof Udit Bhatia</em> - <a href="https://github.com/Dashlander/MSE-402/blob/main/Project">Project Report</a>
+    </p>
+    <ul>
+      <li>Analyzed 9000+ Twitter interactions using graph-based metrics (degree, centrality, modularity) to uncover community dynamics and detect misinformation propagation patterns.</li>
+      <li>Applied power-law modeling and network statistics to identify high-influence nodes, enabling data-driven strategies for curtailing fake news spread.</li>
+    </ul>
+
+    <!-- Projects -->
+    <h2>Projects</h2>
+
+    <p><strong>Semiconductor Material Research - CPU Design Pipeline</strong> <span class="float-right"><strong>Oct 22 - Nov 22</strong></span><br>
+      <em>Prof Sriharitha Rowthu</em> - <a href="#">Project Report</a>
+    </p>
+    <ul>
+      <li>Investigated semiconductor manufacturing stages in modern CPU production.</li>
+      <li>Assessed future material candidates including Ga2O3, HfSe2, and ZrSe2 for next-gen chip fabrication.</li>
+    </ul>
+
+    <p><strong>Superconductors and Magnetic Levitation</strong> <span class="float-right"><strong>Oct 23 - Nov 23</strong></span><br>
+      <em>Prof Gopinadhan Kalon</em> - <a href="#">Project Report</a>
+    </p>
+    <ul>
+      <li>Conducted a comprehensive study on Superconductors, covering fundamental principles, historical context, types and applications.</li>
+      <li>Investigated practical applications of superconductivity in magnetic levitation technology, quantum computing and high field magnets, exploring research trends and properties of topological superconductors.</li>
+    </ul>
+
+    <p><strong>Characterization of Cu-Ni Alloys via Hardness and X-Ray Diffraction</strong> <span class="float-right"><strong>Oct 23</strong></span><br>
+      <em>Prof Pradipta Ghosh</em> - <a href="#">Project Report</a>
+    </p>
+    <ul>
+      <li>Conducted experimental analysis of Copper-Nickel alloys using Vickers hardness testing to quantify material resistance to plastic deformation, demonstrating increasing hardness with higher nickel content.</li>
+      <li>Utilized X-Ray Diffraction and Bragg's Law to determine lattice parameters of Cu-Ni samples, observing decreasing lattice parameters with increasing nickel content, indicative of lattice contraction due to smaller nickel atomic size.</li>
+    </ul>
+
+    <!-- Coursework -->
+    <h2>Relevant Coursework</h2>
+
+    <p><strong>Computational Process Design</strong> - <a href="#">GitHub Repo</a></p>
+    <ul>
+      <li>Worked with Quantum Espresso for computing ground state properties of Platinum and MoS2 band structures.</li>
+      <li>Wrote LAMMPS scripts for water membrane filtration and polymer chain miscibility using MC simulations.</li>
+    </ul>
+
+    <p><strong>Networks and Complex Systems</strong> - <a href="#">Report</a></p>
+    <ul>
+      <li>Worked with and understood various statistical and mathematical tools and techniques used for solving large scale graph systems from a networks perspective.</li>
+      <li>Worked with a dataset of over 200 Nodes, identifying edges, connectivity and various other network attributes for the Indian Railways transportation system.</li>
+    </ul>
+
+    <p><strong>Inverse Modelling</strong> - <a href="#">Presentation</a></p>
+    <ul>
+      <li>Worked on Various Inverse Modelling techniques to find solutions to physics and astronomical problems with real world data.</li>
+    </ul>
+
+    <p><strong>Computational Physics</strong> - <a href="#">Colab Notebook</a></p>
+    <ul>
+      <li>Applied Robust Least Squares, RK4, RK2, and various other techniques to solve time evolution of simple Quantum Mechanical systems.</li>
+    </ul>
+
+    <!-- Positions of Responsibility -->
+    <h2>Positions of Responsibility</h2>
+
+    <p><strong>Convener, Student Senate</strong> - IIT Gandhinagar <span class="float-right">April 2024 - April 2025</span></p>
+    <ul>
+      <li>Elected head of the highest student representative body; led various policy formulation initiatives increasing accountability and feedback; Updated documents 3 years out of date with various levels of versioning.</li>
+      <li>Student Member of the Student Disciplinary Committee of IIT Gandhinagar, upholding the founding ethos of integrity of the institute.</li>
+    </ul>
+
+    <p><strong>Problem Stakeholder, Hackrush</strong> - IIT Gandhinagar <span class="float-right">Oct 2022 - Apr 2025</span></p>
+    <ul>
+      <li>Conducted Cybersecurity workshops training sessions and competitions for 100+ participants, instrumental in growing the culture for Cybersecurity at IIT Gandhinagar.</li>
+      <li>Developed and curated original CTF challenges across Cryptography, Web, and Forensics domains, enhancing the learning experience for participants.</li>
+    </ul>
+
+    <p><strong>Management Coordinator, Technical Council</strong> - IIT Gandhinagar <span class="float-right">Jun 2023 - April 2024</span></p>
+    <ul>
+      <li>Directed a 6-member team to execute a tech orientation program for 250+ freshmen across 3 venues.</li>
+      <li>Spearheaded the induction of 300+ students into technical clubs, formalizing them into officially recognised entities.</li>
+    </ul>
+
+    <!-- Extra Curricular -->
+    <h2>Extra Curricular Activities</h2>
+    <ul>
+      <li>Part of the organising team of the annual institute hackathon, HackRush, as a problem stakeholder from sophomore year, to event lead along with tech lead in the senior undergrad year.</li>
+    </ul>
+
+  </div>
+</PageLayout>
