@@ -1,9 +1,9 @@
 ---
-title: Hello, Welcome
-description: An introduction to using the note feature in Astro Cactus
-publishDate: "2024-10-14T11:23:00Z"
+title: A completed website
+description: Updated website to include most of my details
+publishDate: "2026-02-27T20:06:00Z"
 ---
 
-Hi, Hello. This is an example note feature included with Astro Cactus.
+Took me a whole lot of effort to figure out web development; after forking a code theme and a lot of effort, my respect for web developers has greatly increased.
 
-They're for shorter, concise "post's" that you'd like to share, they generally don't include headings, but hey, that's entirely up to you.
+I finally have a personal website to show for my troubles. The basic wesbite is ready. Blog posts as part of my projects I will add once I recover from just getting this project up and running.
