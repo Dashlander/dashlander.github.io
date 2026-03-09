@@ -1,6 +1,7 @@
 ---
 import PageLayout from "@/layouts/Base.astro";
-import SocialList from "@/components/SocialList.astro";
+import { Icon } from "astro-icon/components";
+
 
 
 const meta = {
@@ -17,8 +18,14 @@ const meta = {
     <p>
       <a href="mailto:maheshtatar@iitgn.ac.in">maheshtatar@iitgn.ac.in</a> |
       <a href="tel:+918530832662">85308 32662</a> |
-      <a href="https://www.linkedin.com/in/nishanttatar/">LinkedIn</a> |
-      <a href="https://github.com/dashlander">GitHub</a>
+      <span style="display: inline-flex; align-items: center; gap: 4px;">
+        <a href="https://www.linkedin.com/in/nishanttatar/">LinkedIn</a>
+        <Icon name="mdi:linkedin" size="20" />
+      </span> |
+      <span style="display: inline-flex; align-items: center; gap: 4px;">
+        <a href="https://github.com/dashlander">GitHub</a>
+        <Icon name="mdi:github" size="20" />
+      </span>
     </p>
 
     <!-- Education -->
