@@ -6,6 +6,10 @@ import SocialList from "@/components/SocialList.astro";
 import { getAllPosts } from "@/data/post";
 import PageLayout from "@/layouts/Base.astro";
 import { collectionDateSort } from "@/utils/date";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import profilePhoto from "../assets/profile.jpg";
+
 
 // Posts
 const MAX_POSTS = 10;
@@ -23,11 +27,43 @@ const allNotes = await getCollection("note");
 const latestNotes = allNotes
 	.sort(collectionDateSort)
 	.slice(0, MAX_NOTES) as CollectionEntry<"note">[];
+
+const info = [
+//  { icon: "mdi:map-marker", label: "IITGN" },
+  { icon: "mdi:email", label: "nishanttatar@gmail.com", link: "mailto:nishanttatar@gmail.com" },
+  { icon: "mdi:linkedin", label: "LinkedIn", link: "https://www.linkedin.com/in/nishanttatar/" },
+  { icon: "mdi:github", label: "Github", link: "https://github.com/dashlander" },
+];
 ---
 
 <PageLayout meta={{ title: "Home" }}>
+			<h1 class="title mb-12">Welcome!</h1>
+
+  <div class="mb-8 flex flex-col items-center gap-6 sm:flex-row sm:items-center">
+    <Image
+      src={profilePhoto}
+      alt="Nishant Tatar"
+      class="h-40 w-40 rounded-full object-cover shadow-md"
+      width={2000}
+      height={2000}
+    />
+
+
+    <!-- Info List -->
+    <ul class="flex flex-col gap-2">
+      {info.map(({ icon, label, link }) => (
+        <li class="flex items-center gap-2">
+          <Icon name={icon} class="h-5 w-5 shrink-0" />
+          {link
+            ? <a href={link} class="hover:text-link" target="_blank" rel="noreferrer">{label}</a>
+            : <span>{label}</span>
+          }
+        </li>
+      ))}
+    </ul>
+  </div>
+
 	<section>
-		<h1 class="title mb-12">Welcome!</h1>
 		<p class="mb-4">
 			This is my personal website. A <s>dumping ground</s> archive and showcase for all my projects, both academic and personal.
 		</p>
