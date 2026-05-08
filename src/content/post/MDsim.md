@@ -1,10 +1,8 @@
 ---
 title: "Molecular Dynamics Simulator"
 description: "A writeup for a basic python based molecular dynamics simulator"
-publishDate: "06 May 2025"
+publishDate: "08 May 2026"
 tags: ["matsci"]
-toc: false
-draft: true
 ---
 
 ## Overview
