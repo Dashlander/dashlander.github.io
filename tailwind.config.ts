@@ -4,6 +4,9 @@ export default {
 	plugins: [require("@tailwindcss/typography")],
 	theme: {
 		extend: {
+			colors: {
+				icon: "var(--color-icon)",
+			},
 			typography: () => ({
 				DEFAULT: {
 					css: {

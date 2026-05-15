@@ -53,7 +53,7 @@ const info = [
     <ul class="flex flex-col gap-2">
       {info.map(({ icon, label, link }) => (
         <li class="flex items-center gap-2">
-          <Icon name={icon} class="h-5 w-5 shrink-0" />
+          <Icon name={icon} class="h-5 w-5 shrink-0 text-icon" />
           {link
             ? <a href={link} class="hover:text-link" target="_blank" rel="noreferrer">{label}</a>
             : <span>{label}</span>
@@ -67,7 +67,6 @@ const info = [
 		<p class="mb-4">
 			This is my personal website. A <s>dumping ground</s> archive and showcase for all my projects, both academic and personal.
 		</p>
-		<SocialList />
 	</section>
 	{
 //		pinnedPosts.length > 0 && (

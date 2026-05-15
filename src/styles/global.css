@@ -14,6 +14,7 @@
   	--color-accent:      oklch(46% 0.16 240);
   	--color-accent-2:    oklch(20% 0.018 290);
   	--color-quote:       oklch(42% 0.12 265);
+	--color-icon:        oklch(58% 0.16 230);
 }
 
 @layer base {
@@ -34,6 +35,7 @@
 			--color-accent:      oklch(72% 0.14 240);
 			--color-accent-2:    oklch(95% 0.005 290);
 			--color-quote:       oklch(74% 0.1 265);
+  			--color-icon:        oklch(80% 0.04 240);
 		}
 	}
 
