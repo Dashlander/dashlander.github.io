@@ -28,12 +28,12 @@
 
 		&[data-theme="dark"] {
 			color-scheme: dark;
-			--color-global-bg:   oklch(23.5% 0.008 60);
-			--color-global-text: oklch(84% 0.008 70);
-			--color-link:        oklch(72% 0.14 230);
-			--color-accent:      oklch(76% 0.12 210);
-			--color-accent-2:    oklch(95% 0.005 70);
-			--color-quote:       oklch(74% 0.09 215);
+--color-global-bg:   oklch(23% 0.018 290);
+--color-global-text: oklch(84% 0.01 290);
+--color-link:        oklch(72% 0.14 230);
+--color-accent:      oklch(72% 0.14 240);
+--color-accent-2:    oklch(95% 0.005 290);
+--color-quote:       oklch(74% 0.1 265);
 		}
 	}
 
