@@ -37,6 +37,14 @@
 		}
 	}
 
+  html.theme-transitioning,
+  html.theme-transitioning *  {
+    transition:
+      background-color 0.4s ease,
+      border-color 0.4s ease,
+      color 0.4s ease !important;
+	}
+
 	:target {
 		scroll-margin-block: 5ex;
 	}
