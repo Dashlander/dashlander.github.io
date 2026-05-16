@@ -1,0 +1,56 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import { getAllPosts } from "@/data/post";
+import { collectionDateSort } from "@/utils/date";
+import { menuLinks } from "@/site.config";
+
+const meta = {
+  description: "All pages on this website",
+  title: "Site Index",
+};
+
+
+const extraPages = [
+  { path: "/resume/", title: "Resume" },
+  { path: "/notes/", title: "Notes" },
+];
+
+const allPosts = await getAllPosts();
+const sortedPosts = allPosts.sort(collectionDateSort);
+
+const allTags = [...new Set(sortedPosts.flatMap((p) => p.data.tags))].sort();
+---
+
+<PageLayout meta={meta}>
+  <h1 class="title mb-12">Site Index</h1>
+  <div class="prose prose-sm prose-cactus max-w-none">
+
+    <h2>Main Pages</h2>
+    <ul>
+      {menuLinks.map((link) => (
+        <li>
+          <a href={link.path} class="cactus-link">{link.title}</a>
+        </li>
+      ))}
+    </ul>
+
+    <h2>Other Pages</h2>
+    <ul>
+      {extraPages.map((page) => (
+        <li>
+          <a href={page.path} class="cactus-link">{page.title}</a>
+        </li>
+      ))}
+    </ul>
+
+    <h2>Blogs by Tags</h2>
+    <ul>
+      {allTags.map((tag) => (
+        <li>
+          <a href={`/tags/${tag}/`} class="cactus-link">#{tag}</a>
+        </li>
+      ))}
+    </ul>
+
+  </div>
+</PageLayout>
