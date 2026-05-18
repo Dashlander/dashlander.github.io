@@ -36,18 +36,18 @@ html`<div tw="flex flex-col w-full h-full bg-[#1a1826] text-[#c8c4dc]">
         </div>
         <div tw="flex items-center justify-between w-full p-10 border-t border-[#6b65a8] text-xl">
             <div tw="flex items-center">
-                <svg height="60" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 480">
+                <svg width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
                     <path
-                        fill="#cdffb8"
-                        d="M181.334 93.333v-40L226.667 80v40zM136.001 53.333 90.667 26.667v426.666L136.001 480zM45.333 220 0 193.334v140L45.333 360z"
+                        fill="#2E4A6A"
+                        d="M200 86.5 349.5 236 200 385.5 50.5 236z"
                     />
                     <path
-                        fill="#d482ab"
-                        d="M90.667 26.667 136.001 0l45.333 26.667-45.333 26.666zM181.334 53.33l45.333-26.72L272 53.33 226.667 80zM136 240l-45.333-26.67v53.34zM0 193.33l45.333-26.72 45.334 26.72L45.333 220zM181.334 93.277 226.667 120l-45.333 26.67z"
+                        fill="#4A7FA8"
+                        d="M126 132.5h148.5l75 75-75 75H126l-75-75z"
                     />
                     <path
-                        fill="#2abc89"
-                        d="m136 53.333 45.333-26.666v120L226.667 120V80L272 53.333V160l-90.667 53.333v240L136 480V306.667L45.334 360V220l45.333-26.667v73.334L136 240z"
+                        fill="#DAEAF5"
+                        d="M126 174h148.5v148.5H126z"
                     />
                 </svg>
                 <p tw="ml-3 font-semibold">${siteConfig.title}</p>
