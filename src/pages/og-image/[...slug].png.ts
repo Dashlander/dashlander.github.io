@@ -28,10 +28,10 @@ const ogOptions: SatoriOptions = {
 	width: 1200,
 };
 
-const markup = (title: string, pubDate: string) =>
+const markup = (title: string, subtitle: string) =>
 html`<div tw="flex flex-col w-full h-full bg-[#1a1826] text-[#c8c4dc]">
         <div tw="flex flex-col flex-1 w-full p-10 justify-center">
-            <p tw="text-2xl mb-6 text-[#8b85b8]">${pubDate}</p>
+            <p tw="text-2xl mb-6 text-[#8b85b8]">${subtitle}</p>
             <h1 tw="text-6xl font-bold leading-snug text-[#f0eeff]">${title}</h1>
         </div>
         <div tw="flex items-center justify-between w-full p-10 border-t border-[#6b65a8] text-xl">
@@ -59,13 +59,8 @@ html`<div tw="flex flex-col w-full h-full bg-[#1a1826] text-[#c8c4dc]">
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 export async function GET(context: APIContext) {
-	const { pubDate, title } = context.props as Props;
-
-	const postDate = getFormattedDate(pubDate, {
-		month: "long",
-		weekday: "long",
-	});
-	const svg = await satori(markup(title, postDate), ogOptions);
+	const { subtitle, title } = context.props as Props;
+	const svg = await satori(markup(title, subtitle), ogOptions);
 	const pngBuffer = new Resvg(svg).render().asPng();
 	const png = new Uint8Array(pngBuffer);
 	return new Response(png, {
@@ -78,13 +73,33 @@ export async function GET(context: APIContext) {
 
 export async function getStaticPaths() {
 	const posts = await getAllPosts();
-	return posts
+
+	const postPaths = posts
 		.filter(({ data }) => !data.ogImage)
 		.map((post) => ({
 			params: { slug: post.id },
 			props: {
-				pubDate: post.data.updatedDate ?? post.data.publishDate,
 				title: post.data.title,
+				subtitle: getFormattedDate(post.data.updatedDate ?? post.data.publishDate, {
+					month: "long",
+					weekday: "long",
+				}),
 			},
 		}));
+
+	const staticPaths = [
+		{ slug: "home", 	title: "Home", 				subtitle: siteConfig.description },
+		{ slug: "about",   	title: "About",          	subtitle: "A little something about me" },
+		{ slug: "posts",   	title: "Blog",            	subtitle: "Latest posts from my blog" },
+		{ slug: "notes",   	title: "Notes",           	subtitle: "a unfiltered stream of thoughts" },
+		{ slug: "resume",  	title: "Resume",          	subtitle: "My Resume, and professional experiences" },
+		{ slug: "sitemap", 	title: "Site Index",      	subtitle: "Browse all available pages" },
+		{ slug: "tags",    	title: "All Tags",        	subtitle: "Filter by topic" },
+		{ slug: "404",     	title: "Page Not Found",  	subtitle: "The page you're looking for doesn't exist" },
+	].map(({ slug, title, subtitle }) => ({
+		params: { slug },
+		props: { title, subtitle },
+	}));
+
+	return [...postPaths, ...staticPaths];
 }
