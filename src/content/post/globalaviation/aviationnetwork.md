@@ -9,7 +9,7 @@ tags: ["networks", "data_analytics"]
 
 The world today is extremely well connected, a network of transit hubs for a large number of people. One can be living in one part of the world and be able to reach another part. While this is a very powerful ability, the idea behind this analysis was to check just how powerful this network is, including major hubs, their connectivity and how they cluster with traffic.
 
-This project was done under the superivison of Prof Udit Bhatia, as part of the Networks and Complex Systems course taken at IITGN, where we were taught about Networks Science. The network under analysis has 227 countries represented as nodes, and flight routes and the traffic volume representing the weighted edges. The full code of the analysis is hosted as a colab file [here](placeholder-for-link).
+This project was done under the superivison of Prof Udit Bhatia, as part of the Networks and Complex Systems course taken at IITGN, where we were taught about Networks Science. The network under analysis has 227 countries represented as nodes, and flight routes and the traffic volume representing the weighted edges. The full code of the analysis is hosted as a colab file [here](https://colab.research.google.com/drive/1_Ger-VC1ek4OZ0tcv5TCWlc-Jzc5hhye?usp=sharing).
 
 
 ## 1. Network Visualisation
