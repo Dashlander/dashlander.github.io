@@ -92,6 +92,8 @@ Save the files and upgrade waydroid to apply the configuration.
 waydroid upgrade --offline
 ```
 
+## Beyond
+
 You should be able to run your game of choice. In case you are still not able to, you may try applying a config file to the following location: ```~/.local/share/waydroid/data/vendor/drirc.d/```. Download the config file [here](https://gitlab.freedesktop.org/mesa/mesa/-/raw/main/src/util/00-mesa-defaults.conf) and move it to the given directory.
 
 Apply the following changes to the file:
@@ -105,3 +107,8 @@ Apply the following changes to the file:
 ```
 
 Change the name and executable depending on the game you wish to run. The above guide should work for most games.
+
+I used the following sources for this guide. In case something breaks, you may check these: the Arch wiki[^1] and Yogsottot's Waydroid stuff repo[^2].
+
+[^1]: https://wiki.archlinux.org/title/Waydroid
+[^2]: https://github.com/YogSottot/waydroid_stuff/releases/tag/lineage_18.1_2025.01.28
